@@ -1,0 +1,52 @@
+<!-- src/app/components/producto-detalle/producto-detalle.component.html -->
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h3>Detalle del Producto</h3>
+          </div>
+  
+          <div class="card-body">
+            @if (currentProducto(); as p) {
+              <div class="mb-3">
+                <div class="form-group mb-2">
+                  <label for="nombre">Nombre</label>
+                  <input type="text" class="form-control" id="nombre"
+                         [(ngModel)]="p.nombre" name="nombre" />
+                </div>
+  
+                <div class="form-group mb-2">
+                  <label for="descripcion">Descripción</label>
+                  <textarea class="form-control" id="descripcion"
+                            [(ngModel)]="p.descripcion" name="descripcion"></textarea>
+                </div>
+  
+                <div class="form-group mb-2">
+                  <label for="precio">Precio</label>
+                  <input type="number" class="form-control" id="precio"
+                         [(ngModel)]="p.precio" name="precio" />
+                </div>
+  
+                <div class="form-group mb-2">
+                  <label for="stock">Stock</label>
+                  <input type="number" class="form-control" id="stock"
+                         [(ngModel)]="p.stock" name="stock" />
+                </div>
+              </div>
+  
+              <div class="d-flex gap-2">
+                <button matButton="elevated" color="primary" (click)="actualizarProducto()">Actualizar</button>
+                <button matButton="elevated" color="warn" (click)="eliminarProducto()">Eliminar</button>
+                <a matButton routerLink="/productos">Volver</a>
+              </div>
+            } @else {
+              <p>{{ message() || 'Cargando producto…' }}</p>
+              <a matButton routerLink="/productos">Volver a la lista</a>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
