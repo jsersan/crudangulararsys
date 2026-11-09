@@ -2,11 +2,11 @@
 // backend-php/config.php · Valores por defecto para desarrollo (MAMP). SIN secretos.
 $config = [
     'db' => [
-        'host'    => '127.0.0.1',   // 127.0.0.1 fuerza TCP; 'localhost' usaría el socket
-        'port'    => '8889',        // MySQL de MAMP
-        'name'    => 'crud_electronica_mysql',
-        'user'    => 'root',
-        'pass'    => 'root',
+        'host'    => 'lldn292.servidoresdns.net',   // host de arsys
+        'port'    => '3306',                       // puerto
+        'name'    => 'qaot591',                   // base de datos
+        'user'    => 'qaot591',                    // usuario
+        'pass'    => 'Jss12aoz',                   // contraseña   
         'charset' => 'utf8mb4',
     ],
     'cors_origins' => ['http://localhost:4200'],

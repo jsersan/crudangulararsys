@@ -1,1 +1,4 @@
-node_modules/, .angular/, .DS_Store y backend-php/config.local.php
+node_modules/
+.angular/
+.DS_Store
+backend-php/config.local.php

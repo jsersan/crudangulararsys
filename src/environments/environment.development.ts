@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost/angular22/crudangular22/backend-php/index.php'
+  // Backend PHP desplegado en Arsys: datos reales (12 productos)
+  apiUrl: 'https://txemaserrano.com/angular/crudelectronicasimplificado-backend/index.php'
 };
